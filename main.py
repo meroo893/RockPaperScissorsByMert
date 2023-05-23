@@ -5,13 +5,14 @@ paper = "Paper"
 scissors = "Scissors"
 
 player_move = input("Choose [r]ock, [p]aper, [s]cissors>>  ")
-while player_move.lower() != "r" and player_move.lower() != "p" and player_move.lower() != "s":
+while player_move.lower() != "r" and player_move.lower() != "p" and player_move.lower() != "s" and \
+        player_move.lower() != "rock" and player_move.lower() != "paper" and player_move.lower() != "scissors":
     print("Invalid input!")
     player_move = input("Choose [r]ock, [p]aper, [s]cissors>>  ")
 
-if player_move == "r":
+if player_move.lower() == "r" or player_move.lower() == "rock":
     player_move = rock
-elif player_move == "p":
+elif player_move == "p" or player_move.lower() == "paper":
     player_move = paper
 else:
     player_move = scissors
